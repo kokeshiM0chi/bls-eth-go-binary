@@ -8,6 +8,7 @@ import (
 	"io/ioutil"
 	"os"
 	"testing"
+	"fmt"
 )
 
 func testUncompressedG1(t *testing.T, gen1 *G1) {
@@ -411,6 +412,7 @@ func blsAggregateVerifyNoCheckTest(t *testing.T) {
 }
 
 func ethAggregateTest(t *testing.T) {
+	fmt.Println("ethAggregateTest is called")
 	fileName := "tests/aggregate.txt"
 	fp, err := os.Open(fileName)
 	if err != nil {
@@ -455,6 +457,8 @@ func ethAggregateTest(t *testing.T) {
 }
 
 func ethAggregateVerifyTest(t *testing.T) {
+	fmt.Println("hogehogehoge is called")
+	t.Logf("ethAggregateVerifyTest is called\n")
 	fileName := "tests/aggregate_verify.txt"
 	fp, err := os.Open(fileName)
 	if err != nil {
